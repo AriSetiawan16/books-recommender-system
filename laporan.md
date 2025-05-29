@@ -10,9 +10,11 @@ Dalam proyek ini, saya mengembangkan sistem rekomendasi buku menggunakan dataset
 
 Referensi:
 
-- [1] International Publishers Association, "Annual Report 2023: Global Publishing Statistics," 2023.
-- [2] Schwartz, B., "The Paradox of Choice: Why More Is Less," Harper Perennial, 2016.
-- [3] Adomavicius, G., dan Tuzhilin, A., "Toward the Next Generation of Recommender Systems: A Survey of the State-of-the-Art and Possible Extensions," IEEE Transactions on Knowledge and Data Engineering, Vol. 17, No. 6, pp. 734-749, 2005.
+[1] International Publishers Association, "Annual Report 2023: Global Publishing Statistics," 2023.
+
+[2] Schwartz, B., "The Paradox of Choice: Why More Is Less," Harper Perennial, 2016.
+
+[3] Adomavicius, G., dan Tuzhilin, A., "Toward the Next Generation of Recommender Systems: A Survey of the State-of-the-Art and Possible Extensions," IEEE Transactions on Knowledge and Data Engineering, Vol. 17, No. 6, pp. 734-749, 2005.
 
 ## Business Understanding
 
