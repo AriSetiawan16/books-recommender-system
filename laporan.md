@@ -54,30 +54,39 @@ Untuk mencapai tujuan tersebut, saya mengusulkan dua pendekatan utama:
 
 ## Data Understanding
 
-Dataset yang digunakan dalam proyek ini adalah dataset buku yang tersedia di Kaggle dengan URL: [https://www.kaggle.com/datasets/abdallahwagih/books-dataset](https://www.kaggle.com/datasets/abdallahwagih/books-dataset). Dataset ini berisi informasi detail tentang berbagai buku dengan total 8,000 entri (baris) dan 11 kolom.
+Dataset yang digunakan dalam proyek ini adalah dataset buku yang tersedia di Kaggle dengan URL: [https://www.kaggle.com/datasets/abdallahwagih/books-dataset](https://www.kaggle.com/datasets/abdallahwagih/books-dataset). Dataset ini berisi informasi detail tentang berbagai buku dengan total 6.810 entri (baris) dan 13 kolom.
+
+Penjelasan Kolom isbn10 dan thumbnail : 
+- isbn10: Nomor ISBN-10 buku, yang digunakan bersama ISBN-13 sebagai ID buku unik (tipe data: object).
+- thumbnail: Gambar sampul buku dalam bentuk URL (tipe data: object), yang sering kali berisi gambar sampul atau link ke gambar sampul buku.
 
 Berikut adalah variabel-variabel yang terdapat dalam dataset:
-- **title**: Judul buku (string)
-- **subtitle**: Subjudul buku, jika ada (string)
-- **authors**: Penulis buku (string)
-- **categories**: Kategori atau genre buku (string)
-- **description**: Deskripsi singkat tentang buku (string)
-- **published_year**: Tahun terbit buku (integer)
-- **average_rating**: Rating rata-rata buku (float, skala 0-5)
-- **num_pages**: Jumlah halaman buku (integer)
-- **ratings_count**: Jumlah rating yang diterima buku (integer)
-- **isbn13**: Nomor ISBN-13 buku, berfungsi sebagai ID unik (string)
-- **userId**: ID pengguna yang memberikan rating (integer)
-
+- isbn13: Nomor ISBN-13 buku, berfungsi sebagai ID unik (tipe data: int64)
+- isbn10: Nomor ISBN-10 buku (tipe data: object)
+- title: Judul buku (tipe data: object)
+- subtitle: Subjudul buku, jika ada (tipe data: object)
+- authors: Penulis buku (tipe data: object)
+- categories: Kategori atau genre buku (tipe data: object)
+- description: Deskripsi singkat tentang buku (tipe data: object)
+- published_year: Tahun terbit buku (tipe data: float64)
+- average_rating: Rating rata-rata buku (tipe data: float64)
+- num_pages: Jumlah halaman buku (tipe data: float64)
+- ratings_count: Jumlah rating yang diterima buku (tipe data: float64)
+- userId: ID pengguna yang memberikan rating (tipe data: int64)
+- title_length: Panjang karakter pada kolom title (tipe data: int64)
+  
 ### Kondisi Data
 
 Analisis awal kondisi data menunjukkan beberapa hal penting:
 
 1. **Missing Values**:
-   - Kolom `subtitle` memiliki 3,245 missing values (40.56%)
-   - Kolom `description` memiliki 1,072 missing values (13.4%)
-   - Kolom `categories` memiliki 438 missing values (5.47%)
-   - Kolom `authors` memiliki 82 missing values (1.02%)
+   - Kolom `subtitle` memiliki 4,429 missing values (65.03%)
+   - Kolom `description` memiliki 262 missing values (3.85%)
+   - Kolom `categories` memiliki 99 missing values (1.45%)
+   - Kolom `authors` memiliki 72 missing values (1.06%)
+   - Kolom `thumbnail` Memiliki 329 missing values (4.83%)
+   - Kolom `published_year` Memiliki 6 missing values (0.09%)
+   - Kolom `average_rating, num_pages, ratings_count` Masing-masing memiliki 43 missing values (0.63%)
 
 2. **Duplicated Values**:
    - Terdapat 124 judul buku yang duplikat (1.55%)
